@@ -1,37 +1,34 @@
-package com.manas.leetco;
-
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class IsomorphicStr {
+public class Solution {
     public boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
 
-        // Maps to store character mappings from s to t and t to s
-        HashMap<Character, Character> mapST = new HashMap<>();
-        HashMap<Character, Character> mapTS = new HashMap<>();
+        // Arrays to store character mappings for ASCII characters
+        int[] mapST = new int[256];
+        int[] mapTS = new int[256];
+        
+        // Initialize arrays with -1 to indicate no mapping yet
+        for (int i = 0; i < 256; i++) {
+            mapST[i] = -1;
+            mapTS[i] = -1;
+        }
 
         for (int i = 0; i < s.length(); i++) {
             char c1 = s.charAt(i);
             char c2 = t.charAt(i);
 
-            // Check if there's an inconsistent mapping from s to t
-            if (mapST.containsKey(c1) && mapST.get(c1) != c2) {
+            // If there is an existing inconsistent mapping, return false
+            if (mapST[c1] == -1 && mapTS[c2] == -1) {
+                mapST[c1] = c2; // Map c1 -> c2
+                mapTS[c2] = c1; // Map c2 -> c1
+            } else if (mapST[c1] != c2 || mapTS[c2] != c1) {
                 return false;
             }
-
-            // Check if there's an inconsistent mapping from t to s
-            if (mapTS.containsKey(c2) && mapTS.get(c2) != c1) {
-                return false;
-            }
-
-            // Add the mappings
-            mapST.put(c1, c2);
-            mapTS.put(c2, c1);
         }
-
+        
         return true;
     }
 
@@ -46,7 +43,7 @@ public class IsomorphicStr {
         String t = scanner.nextLine();
 
         // Create an instance of Solution and check if strings are isomorphic
-        IsomorphicStr solution = new IsomorphicStr();
+        Solution solution = new Solution();
         boolean result = solution.isIsomorphic(s, t);
 
         // Output the result
@@ -55,4 +52,3 @@ public class IsomorphicStr {
         scanner.close();
     }
 }
-
