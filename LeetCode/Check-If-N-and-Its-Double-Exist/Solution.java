@@ -1,15 +1,26 @@
 class Solution {
-    public boolean checkIfExist(int[] arr) {
+    public boolean repeatedSubstringPattern(String s) {
         
-        HashSet<Integer> seen = new HashSet<>();
-
-        for (int num : arr) {
-            if(seen.contains(2 * num) || (num % 2 == 0 && seen.contains(num / 2))){
-                return true;
+       int n = s.length();
+        
+        for (int len = 1; len <= n / 2; len++) {
+            if (n % len == 0) {
+                boolean isValid = true;
+                String substring = s.substring(0, len);
+                
+                for (int i = len; i < n; i += len) {
+                    if (!s.startsWith(substring, i)) {
+                        isValid = false;
+                        break;
+                    }
+                }
+                
+                if (isValid) {
+                    return true;
+                }
             }
-            seen.add(num);
         }
-
+        
         return false;
     }
 }
