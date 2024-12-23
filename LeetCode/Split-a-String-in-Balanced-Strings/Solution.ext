@@ -1,3 +1,0 @@
-Input: s = "RLRRLLRLRL"
-Output: 4
-Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
