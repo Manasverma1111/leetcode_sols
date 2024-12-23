@@ -1,3 +1,0 @@
-Input: nums = [4,3,10,9,8]
-Output: [10,9] 
-Explanation: The subsequences [10,9] and [10,8] are minimal such that the sum of their elements is strictly greater than the sum of elements not included. However, the subsequence [10,9] has the maximum total sum of its elements. 
