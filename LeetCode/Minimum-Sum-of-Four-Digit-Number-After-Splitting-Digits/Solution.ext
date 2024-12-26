@@ -1,4 +1,0 @@
-Input: num = 2932
-Output: 52
-Explanation: Some possible pairs [new1, new2] are [29, 23], [223, 9], etc.
-The minimum sum can be obtained by the pair [29, 23]: 29 + 23 = 52.
