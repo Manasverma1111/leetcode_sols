@@ -8,7 +8,6 @@ class Solution {
         int side1 = nums[0];
         int side2 = nums[1];
         int side3 = nums[2];
-
         if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
             return "none";
         }
