@@ -1,0 +1,2 @@
+Input: s = "abcdefg", k = 2
+Output: "bacdfeg"
