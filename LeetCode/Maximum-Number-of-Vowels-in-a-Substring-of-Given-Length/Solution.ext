@@ -1,3 +1,0 @@
-Input: s = "abciiidef", k = 3
-Output: 3
-Explanation: The substring "iii" contains 3 vowel letters.
