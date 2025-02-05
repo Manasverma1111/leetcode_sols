@@ -1,3 +1,0 @@
-Input: s1 = "bank", s2 = "kanb"
-Output: true
-Explanation: For example, swap the first character with the last character of s2 to make "bank".
