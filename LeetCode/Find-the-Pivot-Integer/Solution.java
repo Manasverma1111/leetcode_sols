@@ -8,3 +8,10 @@ class Solution {
             int rightSum = totalSum - (x - 1) * x / 2;
 
             if (leftSum == rightSum) {
+                return x;
+            }
+        }
+
+        return -1;
+    }
+}
