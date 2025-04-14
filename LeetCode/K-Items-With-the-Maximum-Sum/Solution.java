@@ -6,7 +6,7 @@ class Solution {
 
         int zerosPicked = Math.min(numZeros, k);
         k -= zerosPicked;
-
+        
         int numNegPicked = Math.min(numNegOnes, k);
         return onesPicked - numNegPicked;
         
