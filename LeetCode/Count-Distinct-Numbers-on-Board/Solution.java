@@ -1,10 +1,5 @@
-            Set<Integer> nextNumbers = new HashSet<>();
-
-            for (int x : board) {
-                for (int i = 1; i <= n; i++) {
-                    if (x % i == 1 && !board.contains(i)) {
-                        nextNumbers.add(i);
-                        changed = true;
-                    }
-                }
-            }
+class Solution {
+    public int distinctIntegers(int n) {
+        return Math.max(n - 1, 1);
+    }
+}
