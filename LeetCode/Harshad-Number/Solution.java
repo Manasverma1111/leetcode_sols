@@ -7,7 +7,6 @@ class Solution {
         while (x > 0) {
             sum += x % 10;
             x /= 10;
-
         }
 
         if (org % sum == 0) {
