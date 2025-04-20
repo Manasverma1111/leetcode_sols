@@ -4,7 +4,7 @@ class Solution {
         if (num <= 1) {
             return false;
         }
-
+        
         int sum = 1;
         int sqrt = (int)Math.sqrt(num);
 
