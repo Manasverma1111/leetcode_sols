@@ -1,6 +1,6 @@
 class Solution {
     public int countDigits(int num) {
-        
+              
         int count = 0;
         int orgNum = num;
 
