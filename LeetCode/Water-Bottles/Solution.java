@@ -3,7 +3,7 @@ class Solution {
         
         int totalDrink = numBottles;
         int emptyBottles = numBottles;
-
+ 
         while (emptyBottles >= numExchange) {
             int newBottles = emptyBottles / numExchange;
             totalDrink += newBottles;
