@@ -10,7 +10,7 @@ class Solution {
         }
         return sum;
     }
-
+    
     public int countLargestGroup(int n) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int maxGroupSize = 0;
