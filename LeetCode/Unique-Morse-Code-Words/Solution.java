@@ -9,8 +9,8 @@ class Solution {
 
         for (String word : words) {
             StringBuilder morse = new StringBuilder();
-            for (char c : word.toCharArray()) {
-                morse.append(morseCode[c - 'a']);
+            for (char ch : word.toCharArray()) {
+                morse.append(morseCode[ch - 'a']);
             }
             transformations.add(morse.toString());
         }
