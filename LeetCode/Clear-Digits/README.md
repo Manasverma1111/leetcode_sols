@@ -8,6 +8,8 @@ Your task is to remove all digits by doing this operation repeatedly:
 
 Return the resulting string after removing all digits.
 
+Note that the operation cannot be performed on a digit that does not have any non-digit character to its left.
+
  
 
 Example 1:
