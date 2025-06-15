@@ -11,15 +11,15 @@ class Solution {
             }
             
             StringBuilder processedWord = new StringBuilder();
-            for (char c : word.toCharArray()) {
-                if (Character.isLetter(c)) {
+            for (char ch : word.toCharArray()) {
+                if (Character.isLetter(ch)) {
                     if (i == 0) {
-                        processedWord.append(Character.toLowerCase(c));
+                        processedWord.append(Character.toLowerCase(ch));
                     } else {
                         if (processedWord.length() == 0) {
-                            processedWord.append(Character.toUpperCase(c));
+                            processedWord.append(Character.toUpperCase(ch));
                         } else {
-                            processedWord.append(Character.toLowerCase(c));
+                            processedWord.append(Character.toLowerCase(ch));
                         }
                     }
                 }
