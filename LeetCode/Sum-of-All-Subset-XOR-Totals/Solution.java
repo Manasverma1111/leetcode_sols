@@ -1,16 +1,19 @@
 class Solution {
     public int subsetXORSum(int[] nums) {
-        return dfs(nums, 0, 0);
-    }
+        int sum = 0;
+        int n = nums.length;
 
-    private int dfs(int[]nums, int index, int currXOR) {
-        if (index == nums.length){
-            return currXOR;
+        for (int i = 0; i < (1 << n); i++){
+            int xor = 0;
+            for (int j = 0; j < n; j++) {
+                if ((i & (1 << j)) != 0){
+                    xor ^= nums[j];
+                }
+            }
+
+            sum += xor;
         }
 
-        int include = dfs(nums, index + 1, currXOR ^ nums[index]);
-        int exclude = dfs(nums, index + 1, currXOR);
-
-        return include + exclude;
+        return sum;
     }
 }
