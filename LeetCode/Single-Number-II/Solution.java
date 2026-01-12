@@ -1,8 +1,8 @@
-1import java.util.Scanner;
-2
-3class Solution {
-4    public int singleNumber(int[] nums) {
-5        int ones = 0, twos = 0;
+1class Solution {
+2    public int singleNumber(int[] nums) {
+3        
+4        int ones = 0;
+5        int twos = 0;
 6
 7        for (int num : nums) {
 8            ones = (ones ^ num) & ~twos;
