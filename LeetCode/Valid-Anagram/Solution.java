@@ -6,18 +6,21 @@
 6        }
 7
 8        int[] freq = new int[26];
-9        for (int i = 0; i < s.length(); i++) {
-10            freq[s.charAt(i) - 'a']++;
-11            freq[t.charAt(i) - 'a']--;
-12        }
-13
-14        for (int count : freq) {
-15            if (count != 0) {
-16                return false;
-17            }
-18        }
-19
-20        return true;
-21
-22    }
-23}
+9        for (char ch : s.toCharArray()) {
+10            freq[ch - 'a']++;
+11        }
+12
+13        for (char ch : t.toCharArray()) {
+14            freq[ch - 'a']--;
+15        }
+16
+17        for (int count : freq) {
+18            if (count != 0) {
+19                return false;
+20            }
+21        }
+22
+23        return true;
+24
+25    }
+26}
