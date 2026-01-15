@@ -1,30 +1,23 @@
 1class Solution {
 2    public boolean isAnagram(String s, String t) {
-3        
-4        if (s == null || t == null) {
+3
+4        if (s.length() != t.length()) {
 5            return false;
 6        }
 7
-8        s = s.replaceAll("\\s+", "").toLowerCase();
-9        t = t.replaceAll("\\s+", "").toLowerCase();
-10
-11        if (s.length() != t.length()) {
-12            return false;
-13        }
-14
-15        int[] freq = new int[26];
-16        for (int i = 0; i < s.length(); i++) {
-17            freq[s.charAt(i) - 'a']++;
-18            freq[t.charAt(i) - 'a']--;
-19        }
-20
-21        for (int count : freq) {
-22            if (count != 0) {
-23                return false;
-24            }
-25        }
-26
-27        return true;
-28
-29    }
-30}
+8        int[] freq = new int[26];
+9        for (int i = 0; i < s.length(); i++) {
+10            freq[s.charAt(i) - 'a']++;
+11            freq[t.charAt(i) - 'a']--;
+12        }
+13
+14        for (int count : freq) {
+15            if (count != 0) {
+16                return false;
+17            }
+18        }
+19
+20        return true;
+21
+22    }
+23}
