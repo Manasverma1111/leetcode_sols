@@ -33,3 +33,9 @@ Example 4:
 Input: s = "([])"
 
 Output: true
+
+Example 5:
+
+Input: s = "([)]"
+
+Output: false
