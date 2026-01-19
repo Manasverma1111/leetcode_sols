@@ -4,18 +4,18 @@
 4        int vertical = 0;
 5        int horizontal = 0;
 6
-7        for (char move : moves.toCharArray()) {
-8            if (move == 'U') {
+7        for (char ch : moves.toCharArray()) {
+8            if (ch == 'U') {
 9                vertical++;
-10            } else if (move == 'D') {
+10            } else if (ch == 'D') {
 11                vertical--;
-12            } else if (move == 'L') {
+12            } else if (ch == 'L') {
 13                horizontal--;
-14            } else if (move == 'R') {
+14            } else {
 15                horizontal++;
 16            }
 17        }
 18
-19        return vertical == 0 && horizontal == 0;
+19        return (horizontal == 0 && vertical == 0);
 20    }
 21}
