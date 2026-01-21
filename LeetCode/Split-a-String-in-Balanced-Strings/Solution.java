@@ -1,21 +1,21 @@
-class Solution {
-    public int balancedStringSplit(String s) {
-        
-        int balance = 0;
-        int count = 0;
-
-        for (char ch : s.toCharArray()) {
-            if (ch == 'L') {
-                balance++;
-            } else if (ch == 'R') {
-                balance--;
-            }
-
-            if (balance == 0) {
-                count++;
-            }
-        }
-
-        return count;
-    }
-}
+1class Solution {
+2    public int balancedStringSplit(String s) {
+3        
+4        int balance = 0;
+5        int count = 0;
+6
+7        for (char ch : s.toCharArray()) {
+8            if (ch == 'L') {
+9                balance++;
+10            } else if (ch == 'R') {
+11                balance--;
+12            }
+13
+14            if (balance == 0) {
+15                count++;
+16            }
+17        }
+18
+19        return count;
+20    }
+21}
