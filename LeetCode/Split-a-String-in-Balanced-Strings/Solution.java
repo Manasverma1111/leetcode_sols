@@ -5,9 +5,9 @@
 5        int count = 0;
 6
 7        for (char ch : s.toCharArray()) {
-8            if (ch == 'L') {
+8            if (ch == 'R') {
 9                balance++;
-10            } else if (ch == 'R') {
+10            } else if (ch == 'L') {
 11                balance--;
 12            }
 13
