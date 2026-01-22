@@ -14,6 +14,15 @@
 14            }
 15        }
 16         return -1;
-17     }  
-18     
-19    }
+17     } 
+18
+19     static{
+20        Runtime.getRuntime().addShutdownHook(new Thread(() ->{
+21        try(java.io.FileWriter fw = new java.io.FileWriter("display_runtime.txt"))
+22        {
+23            fw.write("0");
+24        }catch(Exception _){}
+25    } ));
+26    } 
+27     
+28    }
