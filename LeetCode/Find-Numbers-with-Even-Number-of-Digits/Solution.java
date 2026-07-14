@@ -14,18 +14,20 @@
 14
 15    public boolean isEvenDigits(int num) {
 16
-17        int evenCount = 0;
+17        // int evenCount = 0;
 18
-19        while(num > 0) {
-20            int dig = num % 10;
-21            num /= 10;
-22            evenCount++;
-23        }
+19        // while(num > 0) {
+20        //     int dig = num % 10;
+21        //     num /= 10;
+22        //     evenCount++;
+23        // }
 24
-25        if (evenCount % 2 == 0) {
-26            return true;
-27        }
+25        // if (evenCount % 2 == 0) {
+26        //     return true;
+27        // }
 28
-29        return false;
-30    }
-31}
+29        // return false;
+30
+31        return ((int)(Math.log10(num)) + 1) % 2 == 0;
+32    }
+33}
